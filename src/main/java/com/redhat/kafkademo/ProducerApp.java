@@ -12,7 +12,7 @@ public class ProducerApp {
 	public static void main(String[] args) throws Exception {
 
 		final Properties props = new Properties();
-		props.put("bootstrap.servers", "my-cluster-kafka-bootstrap-myproject.192.168.99.100.nip.io:443");
+		props.put("bootstrap.servers", "my-cluster-kafka-external-bootstrap-amq-streams-demo.apps.ocp-test.corp.oshft.com:443");
 		props.put("acks", "all");
 		props.put("retries", 0);
 		props.put("batch.size", 16384);
