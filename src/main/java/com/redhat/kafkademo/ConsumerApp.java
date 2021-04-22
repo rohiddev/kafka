@@ -18,10 +18,10 @@ public class ConsumerApp {
         props.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
 
         props.put("security.protocol", "SSL");
-		props.put("ssl.keystore.location", "src/main/resources/keystore.jks");
-		props.put("ssl.keystore.password", "password");
-		props.put("ssl.truststore.location", "src/main/resources/keystore.jks");
-		props.put("ssl.truststore.password", "password");
+		//props.put("ssl.keystore.location", "src/main/resources/keystore.jks");
+		//props.put("ssl.keystore.password", "password");
+		//props.put("ssl.truststore.location", "src/main/resources/keystore.jks");
+		//props.put("ssl.truststore.password", "password");
 
         try (final KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props)) {
             consumer.subscribe(Arrays.asList("my-topic"));
