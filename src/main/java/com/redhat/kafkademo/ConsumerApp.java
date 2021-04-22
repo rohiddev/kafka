@@ -12,7 +12,7 @@ public class ConsumerApp {
     public static void main(String[] args) throws Exception {
 
         final Properties props = new Properties();
-        props.put("bootstrap.servers", "my-cluster-kafka-bootstrap-myproject.192.168.99.100.nip.io:443");
+        props.put("bootstrap.servers", "my-cluster-kafka-external-bootstrap-amq-streams-demo.apps.ocp-test.corp.oshft.com:443");
         props.put("group.id", "sample-consumer");
         props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         props.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
