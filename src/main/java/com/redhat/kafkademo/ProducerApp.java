@@ -21,10 +21,10 @@ public class ProducerApp {
 		props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
 
 		props.put("security.protocol", "SSL");
-		//props.put("ssl.keystore.location", "src/main/resources/keystore.jks");
-		//props.put("ssl.keystore.password", "password");
-		//props.put("ssl.truststore.location", "src/main/resources/keystore.jks");
-		//props.put("ssl.truststore.password", "password");
+		props.put("ssl.keystore.location", "/mnt/secrets/keystore.jks");
+		props.put("ssl.keystore.password", "password");
+		props.put("ssl.truststore.location", "/mnt/secrets/keystore.jks");
+		props.put("ssl.truststore.password", "password");
 
 		try (final Producer<String, String> producer = new KafkaProducer<>(props)) {
 			while (true) {
